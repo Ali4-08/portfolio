@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* @font-face {
+  font-family: "Vazir";
+  src: url("./fonts/Vazir-FD-WOL.ttf") format("ttf"),
+        url("./fonts/Vazir-FD-WOL.woff") format("woff"),
+        url("./fonts/Vazir-FD-WOL.woff2") format("woff2"),        
+} */
+
+html {
+  font-family: 'vazirmatn', system-ui, sans-serif;   
+  scroll-behavior: smooth;    
+}
+
+
