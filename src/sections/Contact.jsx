@@ -11,13 +11,13 @@ export default function Contact() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const triggerConfetti = () => {
-    confetti({
-      particleCount: 100,
+  import('canvas-confetti').then((module) => {
+    module.default({
+      particleCount: 80,
       spread: 70,
-      origin: { y: 0.6 },
-      colors: ["#06b6d4", "#3b82f6", "#8b5cf6", "#ec4899"],
     });
-  };
+  });
+};
 
   const onSubmit = async (e) => {
     e.preventDefault();

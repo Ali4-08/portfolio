@@ -53,8 +53,7 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 gap-20 items-center">
           {/* تایم لاین تجربه */}
-          <MotionWrapper
-            className="space-y-8 h-full"
+          <div className="space-y-8 h-full"
           >
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
               مسیر حرفه ای من
@@ -82,11 +81,10 @@ export default function About() {
                 </div>
               ))}
             </div>
-          </MotionWrapper>
+          </div>
 
           {/* مهارت ها */}
-          <MotionWrapper
-          >
+          <div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-10">
               مهارت‌های فنی
             </h3>
@@ -104,19 +102,17 @@ export default function About() {
                   </div>
 
                   <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.percentage}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.5, delay: index * 0.1 }}
-                      className={`${skill.color} h-3 rounded-full`}
-                    />
+                    <div className={`h-3 rounded-full ${skill.color}`}
+                    style={{width: `${skill.percentage}%`}}
+                    >
+
+                    </div>
                   </div>
                   
                 </div>
               ))}
             </div>
-          </MotionWrapper>
+          </div>
         </div>
       </div>
     </section>
