@@ -59,7 +59,7 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 border border-gray-200 dark:border-gray-600 dark:hover:border-gray-800 hover:border-cyan-500 transition-all duration-500"
+              className="group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 border border-gray-200 dark:border-gray-600 dark:hover:border-gray-800 hover:border-cyan-500 transition-all duration-500"              
             >
               {/* تصویر پروژه */}
               <div className="relative overflow-hidden h-56">

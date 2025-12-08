@@ -82,7 +82,7 @@ export default function Navbar() {
             </div>
 
             {/* منوی موبایل - همبرگری */}
-            <div className="md:hidden flex items-center gap-4">
+            <div className="sticky top-0 md:hidden flex items-center gap-4">
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 dark:text-gray-200"
@@ -104,7 +104,7 @@ export default function Navbar() {
        
           {isMobileMenuOpen && (
             <div              
-              className="fixed md:hidden top-0 left-0 right-0 bg-white dark:bg-gray-900 shadow-2xl border-t dark:border-gray-800"
+              className="fixed md:hidden top-20 left-0 right-0 bg-white/95 dark:bg-gray-900 shadow-2xl border-t border-t-gray-300 dark:border-gray-800"
             >
               <div className="py-6 px-6 space-y-6">
                 {links.map((link, index) => (
