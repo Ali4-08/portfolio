@@ -1,19 +1,20 @@
-// src/sections/Projects.jsx
+import PortfolioImage from "../assets/images/portfolio.webp";
 import MotionWrapper from "../components/MotionWrpper";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 export default function Projects() {
- 
+  
   const projects = [
     {
       id: 1,
       title: "پورتفولیو شخصی ۲۰۲۵",
       description:
-        "پورتفولیو حرفه‌ای با React، Tailwind و انیمیشن‌های Framer Motion. همین سایتی که الان داری می‌بینی!",
-      tech: ["React", "Tailwind", "Framer Motion", "Vite"],
-      liveUrl: "https://yourname.vercel.app", // بعداً عوض کن
-      githubUrl: "https://github.com/yourusername/yourname-portfolio",
-      image: "/api/placeholder/600/400", // بعداً عکس واقعی بذار
+        "پورتفولیو شخصی علی باقری - توسعه‌دهنده فرانت‌اند",
+      tech: ["React", "Tailwind", "Framer Motion", "Vite", "Context"],
+      liveUrl: "https://portfolio-ten-weld-31.vercel.app/", 
+      githubUrl: "https://github.com/Ali4-08/portfolio.git",
+      image: PortfolioImage, 
       featured: true,
     },
     {
@@ -40,34 +41,11 @@ export default function Projects() {
     },
   ];
 
-  // // انیمیشن ورود کارت‌ها (یکی یکی ظاهر بشن)
-  // const containerVariants = {
-  //   hidden: { opacity: 0 },
-  //   visible: {
-  //     opacity: 1,
-  //     transition: {
-  //       staggerChildren: 0.1, // هر کارت ۰.۲ ثانیه بعد از قبلی ظاهر بشه
-  //     },
-  //   },
-  // };
-
-  // const cardVariants = {
-  //   hidden: { opacity: 0, y: 60 },
-  //   visible: {
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: { duration: 0.8, ease: "easeOut" },
-  //   },
-  // };
-
   return (
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-6">
-       
         {/* عنوان بخش */}
-        <MotionWrapper
-          className="text-center mb-16"
-        >
+        <MotionWrapper className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             پروژه‌های من
           </h2>
@@ -78,18 +56,23 @@ export default function Projects() {
 
         {/* گرید کارت‌ها */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
           {projects.map((project) => (
-            <div 
-            key={project.id}
-            className="group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 border border-gray-200 hover:border-cyan-500 transition-all duration-500">
-              
+            <div
+              key={project.id}
+              className="group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 border border-gray-200 dark:border-gray-600 dark:hover:border-gray-800 hover:border-cyan-500 transition-all duration-500"
+            >
               {/* تصویر پروژه */}
               <div className="relative overflow-hidden h-56">
-                
                 <div className="w-full h-full bg-linear-to-br from-cyan-400 to-blue-600">
-                  <div className="flex items-center justify-center h-full text-6xl font-black text-white/20 hover:scale-110 transition-all duration-300">
-                    {project.title[0]}
+                  <div className="flex items-center justify-center h-full text-2xl font-black text-white/30 hover:scale-110 transition-all duration-300">
+                    <img
+                      src={project.image}
+                      alt={project.description}
+                      loading="lazy"
+                      width="1584"
+                      height="739"
+                      className="w-full h-full object-cover object-top transition-transform"
+                    />
                   </div>
                 </div>
 
@@ -99,7 +82,6 @@ export default function Projects() {
                     ویژه
                   </div>
                 )}
-
               </div>
 
               {/* محتوای کارت */}
@@ -153,7 +135,6 @@ export default function Projects() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

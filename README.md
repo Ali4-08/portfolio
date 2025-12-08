@@ -1,16 +1,47 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# علی باقری  
+**Front-End Developer | React & Tailwind Specialist**
 
-Currently, two official plugins are available:
+![Portfolio Preview](public/images/portfolio.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**لایو دمو:** https://portfolio-ten-weld-31.vercel.app  
+**گیت‌هاب:** https://github.com/Ali4-08/portfolio
 
-## React Compiler
+</div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## درباره پروژه
+پورتفولیو شخصی ۲۰۲۵ – ساخته شده با عشق و دقت برای نمایش بهترین کارهای من تا امروز.
 
-## Expanding the ESLint configuration
+### تکنولوژی‌های استفاده شده
+React • Tailwind CSS • Framer Motion • Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ابزارهای کمکی
+- Lucide React → آیکون‌های زیبا و سبک
+- Formspree → فرم تماس بدون بک‌اند
+- Canvas Confetti → جشن بعد از ارسال پیام
+- Vercel → دیپلوی و CI/CD
+
+### ویژگی‌های کلیدی
+- کاملاً ریسپانسیو (موبایل اول)
+- تم دارک/لایت با ذخیره در localStorage
+- انیمیشن‌های نرم و بهینه با Framer Motion
+- فرم تماس واقعی با Formspree + confetti
+- Performance بالا: **۹۰ دسکتاپ | ۸۹ موبایل** (Lighthouse)
+- عکس‌ها بهینه‌شده با WebP
+- دیپلوی شده روی Vercel با CI/CD خودکار
+
+### پروژه‌های بعدی (در حال توسعه)
+- Job Board ایرانی – جستجوی شغل با فیلتر پیشرفته
+- داشبورد ادمین با Recharts و TanStack Table
+
+---
+
+**در دسترس برای همکاری فریلنس و همکاری پروژه ای**  
+اگر دنبال یه دولوپر فرانت‌اند با دقت بالا، کد تمیز و عشق به UI/UX هستید، خوشحال می‌شم باهم صحبت کنیم!
+
+**ali.bagheri408@gmail.com** | **+98 937 233 3084** | **t.me/AliDev408**
+
+<div align="center">
+  ساخته شده با ❤️
+</div>

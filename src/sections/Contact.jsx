@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useForm } from "@formspree/react";
-import confetti from "canvas-confetti";
-import { motion, AnimatePresence } from "framer-motion";
 import MotionWrapper from "../components/MotionWrpper";
-import { Send, CheckCircle } from "lucide-react";
+import { Send } from "lucide-react";
+import { CheckCircle } from "lucide-react";
+
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xyzrprrp");
@@ -65,7 +65,7 @@ export default function Contact() {
 
         <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 md:p-12">
           {showSuccess ? (
-            <MotionWrapper
+            <div
               className="text-center py-12"
             >
               <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-6" />
@@ -75,7 +75,7 @@ export default function Contact() {
               <p className="text-lg text-gray-600 dark:text-gray-400">
                 به زودی جواب می‌دم ❤️
               </p>
-            </MotionWrapper>
+            </div>
           ) : (
             <form onSubmit={onSubmit} className="space-y-8">
               {/* نام و نام خانوادگی */}
@@ -140,18 +140,17 @@ export default function Contact() {
               </div>
 
               {/* نمایش خطا */}
-              <AnimatePresence>
+             
                 {errorMessage && (
                 <motion.p
                   initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}                 
                   className="text-red-500 text-center font-medium bg-red-50 dark:bg-red-900/30 px-6 py-4 rounded-2xl border border-red-200 dark:border-red-800"
                 >
                   {errorMessage}
                 </motion.p>
               )}
-              </AnimatePresence>
+             
             </form>
           )}
         </div>
