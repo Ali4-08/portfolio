@@ -25,7 +25,7 @@ export default function Footer() {
           >
             <h3>علی باقری</h3>
             <p>Frontend Developer</p>
-            <p>HTML, CSS, jAVASCRIPT, Tailwindcss, React, Github</p>
+            <p>HTML, CSS, Javascript, Tailwindcss, React, Github</p>
           </div>
 
           {/* بخش لینک های اجتماعی */}
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* خط جداکننده بالا (اختیاری) */}
+       
         <div className="max-w-7xl mt-10 pt-8 border-t border-gray-800 text-gray-500 text-xs text-center">
           {/* بخش کپی رایت */}
           <div

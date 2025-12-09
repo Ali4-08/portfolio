@@ -8,11 +8,11 @@ import { motion } from "framer-motion";
 
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false); //بررسی اسکرول کردن صفحه
-  const {isDark, toggleTheme} = useTheme(); //بررسی حالت دارک مود
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); //بررسی نمایش موی موبایل
+  const [isScrolled, setIsScrolled] = useState(false); //استیت برای اسکرول
+  const {isDark, toggleTheme} = useTheme(); //استیت حالت روز و شب
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); //استیت باز شدن منوی موبایل
 
-  //گرفتن اسکرول صفحه
+  //بعد از اسکرول کردن به اندازه 50 پیکسل استیت را فعال یکند
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -24,10 +24,11 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+    
   }, []);
 
   
-  //لینک های منو
+  //لینک ها
   const links = [
     { name: "درباره من", href: "#about" },
     { name: "پروژه ها", href: "#projects" },
@@ -44,14 +45,14 @@ export default function Navbar() {
 
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-white/65 dark:bg-gray-700/90 backdrop-blur-sm shadow-xl"
+            ? "bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm shadow-xl"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-5">
           <div className="flex items-center justify-between flex-row-reverse">
            
-            {/* اسم / لوگو */}
+            {/* لوگو / عنوان */}
             <div              
               className="text-2xl font-black text-cyan-500 dark:text-cyan-400 hover:scale-110 transition-all duration-300"
             >
@@ -71,7 +72,7 @@ export default function Navbar() {
                 </a>
               ))}
 
-              {/* دکمه دارک/لایت */}
+              {/* حالت روز و شب */}
               <button onClick={toggleTheme}>
                 {isDark ? (
                   <Sun size={20} className="text-yellow-500" />
@@ -81,7 +82,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* منوی موبایل - همبرگری */}
+            {/* تاگل منوی موبایل */}
             <div className="sticky top-0 md:hidden flex items-center gap-4">
               <button
                 onClick={toggleTheme}
@@ -97,14 +98,14 @@ export default function Navbar() {
                 {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
               </button>
             </div>
+
           </div>
         </div>
 
-        {/* منوی موبایل وقتی باز بشه */}
-       
+        {/* وقتی منوی موبایل باز می شود */}       
           {isMobileMenuOpen && (
             <div              
-              className="fixed md:hidden top-20 left-0 right-0 bg-white/95 dark:bg-gray-900 shadow-2xl border-t border-t-gray-300 dark:border-gray-800"
+              className="fixed md:hidden top-20 left-0 right-0 bg-white/95 dark:bg-gray-900/95 shadow-2xl border-t border-t-gray-300 dark:border-gray-800"
             >
               <div className="py-6 px-6 space-y-6">
                 {links.map((link, index) => (

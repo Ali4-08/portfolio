@@ -15,15 +15,14 @@ export default function Hero() {
       {/* محتوای اصلی */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         
-        <MotionWrapper          
-          className="text-4xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight"
-        >
-          سلام، من <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">علی باقری</span> هستم
-        </MotionWrapper>
+        <MotionWrapper className="text-4xl md:text-7xl lg:text-8xl font-black text-white leading-tight space-y-8">
+
+          سلام، من<div> <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">علی باقری</span> هستم</div>
+        
 
         {/* تایپ انیمیشن */}
         <div       
-          className="text-lg md:text-4xl text-gray-300 font-light mb-6 sm:mb-12">
+          className="text-xl md:text-4xl text-gray-300 font-light mb-6 sm:mb-12">
 
           من یک{" "}
           <TypeAnimation
@@ -45,6 +44,7 @@ export default function Hero() {
           />{""}
           هستم
         </div>
+        </MotionWrapper>
 
         {/* دکمه‌ها — نسخه شیشه‌ای + glow */}
         <div       
