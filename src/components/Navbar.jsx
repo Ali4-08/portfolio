@@ -85,7 +85,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-              className="p-2 text-gray-200"
+              className={`p-2 ${isScrolled ? "text-gray-600" : "text-gray-200"}`}
             >
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
