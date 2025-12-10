@@ -73,7 +73,7 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, 15, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-3 left-1/2 -translate-x-1/2 text-cyan-400"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-cyan-400"
       >
         <Mouse size={32} className="animate-bounce" />
       </motion.div>
