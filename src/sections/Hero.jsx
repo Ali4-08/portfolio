@@ -11,7 +11,7 @@ export default function Hero() {
 
       {/* محتوای اصلی */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <MotionWrapper className="text-4xl md:text-7xl lg:text-8xl font-black text-white leading-tight space-y-8">
+        <MotionWrapper className="text-3xl md:text-7xl lg:text-8xl font-black text-white leading-tight space-y-8">
           سلام، من
           <div>
             {" "}
@@ -20,8 +20,9 @@ export default function Hero() {
             </span>{" "}
             هستم
           </div>
+
           {/* تایپ انیمیشن */}
-          <div className="text-xl md:text-4xl text-gray-300 font-light mb-6 sm:mb-12">
+          <div className="text-lg md:text-4xl text-gray-300 font-light mb-6 sm:mb-12">
             
             <TypeAnimation
               sequence={[
@@ -72,7 +73,7 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, 15, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-cyan-400"
+        className="absolute bottom-3 left-1/2 -translate-x-1/2 text-cyan-400"
       >
         <Mouse size={32} className="animate-bounce" />
       </motion.div>
