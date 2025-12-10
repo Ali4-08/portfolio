@@ -16,7 +16,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 dark:bg-black text-white border-t border-gray-800">
-      <div className="max-w-4xl mx-auto px-6 py-12">
+      <div className="max-w-4xl mx-auto px-2 sm:px-6 py-12">
        
         <div className="grid md:grid-cols-2 gap-10 text-center">
           {/* بخش نام و توضیحات */}
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           {/* بخش لینک های اجتماعی */}
-          <div className="flex justify-center items-center md:justify-end gap-4">
+          <div className="flex justify-center items-center md:justify-end gap-4 flex-wrap">
             {socialLinks.map((link, index) => (
               <a
                 key={index}

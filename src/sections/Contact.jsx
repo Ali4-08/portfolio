@@ -126,7 +126,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="inline-flex items-center gap-3 px-10 py-5 bg-linear-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-500 shadow-lg hover:shadow-cyan-500/50 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="inline-flex items-center gap-3 px-5 sm:px-10 py-5 bg-linear-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-500 shadow-lg hover:shadow-cyan-500/50 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {state.submitting ? (
                     "درحال ارسال"

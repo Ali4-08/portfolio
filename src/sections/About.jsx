@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import MotionWrapper from "../components/MotionWrpper";
 
+function toPersianDigits(num) {
+  return num.toString().replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
+}
+
 export default function About() {
   // داده‌های مهارت‌ها
   const skills = [
@@ -38,8 +42,7 @@ export default function About() {
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-6">
         {/* عنوان بخش */}
-        <MotionWrapper 
-        className="text-center mb-20">
+        <MotionWrapper className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             درباره من
           </h2>
@@ -58,13 +61,13 @@ export default function About() {
             </h3>
 
             <div>
-              {/* خط عمودی تایم لاین
-              <div className="absolute right-5 bottom-40  top-0 w-0.5 bg-linear-to-b from-cyan-500 to-blue-500"></div> */}
-
               {timeline.map((item, index) => (
-                <div key={index} className="flex items-start mb-12">
-                  <div className="w-10 h-10 p-2 ml-2 bg-linear-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center z-10">
-                    <span className="text-sm">{item.year}</span>
+                <div key={index} className="flex flex-start mb-12">
+                  
+                  <div className="shrink-0 w-10 h-10 ml-2 bg-linear-to-r from-cyan-500 to-blue-600 rounded-full grid place-items-center z-10">
+                    <span className="block mt-1">
+                      {toPersianDigits(item.year)}
+                    </span>
                   </div>
 
                   <div className="ml-8">
@@ -89,7 +92,6 @@ export default function About() {
             <div className="space-y-6">
               {skills.map((skill, index) => (
                 <div key={index} className="space-y-2">
-
                   <div className="flex justify-between items-center">
                     <span className="font-medium text-gray-700 dark:text-gray-300">
                       {skill.name}
@@ -100,15 +102,14 @@ export default function About() {
                   </div>
 
                   <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                    <motion.div className={`h-3 rounded-full ${skill.color}`}
-                    initial={{width: 0}}
-                    whileInView={{width: `${skill.percentage}%`}}
-                    viewport={{once: true}}
-                    transition={{duration: 0.8}}
-                    >
-                    </motion.div>
+                    <motion.div
+                      className={`h-3 rounded-full ${skill.color}`}
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${skill.percentage}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8 }}
+                    ></motion.div>
                   </div>
-                  
                 </div>
               ))}
             </div>
