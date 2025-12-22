@@ -1,4 +1,5 @@
 import PortfolioImage from "../assets/images/portfolio.webp";
+import JobBoardImage from "../assets/images/jobboard.webp";
 import MotionWrapper from "../components/MotionWrpper";
 import { Github } from "lucide-react";
 import { ExternalLink } from "lucide-react";
@@ -23,9 +24,9 @@ export default function Projects() {
       description:
         "پلتفرم جستجوی شغل با فیلتر پیشرفته، سرچ هوشمند و طراحی مدرن. پروژه بعدی ما!",
       tech: ["React", "Zustand", "Tailwind", "Vercel"],
-      liveUrl: "#",
-      githubUrl: "#",
-      image: "/api/placeholder/600/400",
+      liveUrl: "https://jobboard-puce-xi.vercel.app/",
+      githubUrl: "https://github.com/Ali4-08/jobboard.git",
+      image: JobBoardImage,
       featured: false,
     },
     {
